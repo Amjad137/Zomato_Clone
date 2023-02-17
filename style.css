@@ -5,7 +5,7 @@
     font-family: 'Poppins',sans-serif;
 }
 
-.HeroSectionNav{
+.HeroSection{
     background: url(/Images/heroSectionBackground.png);
     background-size: cover;
     background-position: center;
@@ -19,7 +19,7 @@
     justify-content: space-between;
     height: 65px;
     width: 16px 48px;
-    
+    padding: 20px;
 }
 
 .NavBar a{
@@ -27,9 +27,9 @@
     text-decoration: none;
 }
 
-.NavBarMenuContainer{
+.NavBarMenuLeftContainer{
     display: flex;
-    gap: 18px;
+    gap: 28px;
 }
 
 .NavBarMenuContainer .UserIcon{
@@ -41,13 +41,122 @@
     border-radius: 100%;
     border: solid 1px white;
 }
+
 .HeroSectionContainer{
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 20px;
+    height: calc(50vh - 65px);
 }
-/* 
+
 .HeroSectionLogo{
     height: 40px;
     width: 200px;
-} */
+}
+.HeroSectionTitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 380;
+}
+.HeroInputContainer{
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+    /* border: none; */
+    display: flex;
+    gap: 10px   ;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.HeroInputContainer .LocationInputContainer{
+    border: none;
+    border-right: 2px solid #e0e0e0;
+    width: 25%;
+    padding: 5px;
+    outline: none;
+}
+.HeroInputContainer .SearchInputContainer{
+    border: none;
+    width: 75%;
+    padding: 5px;
+    outline: none;
+}
+
+
+.CardContainerSection{
+    margin: 3rem auto;
+    width: 90%;
+    display: flex;
+   flex-wrap : wrap;
+   gap: 0.5rem;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.CardContainer{
+    transition: all ease 1s;
+    /* transition delay is not given to give a cool transition */
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    margin-right: 10px;
+    
+}
+
+.CardContainer img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+}
+.CardContainer:hover{
+    transform: scale(1.1);
+}
+
+.CardContainerContent{
+    padding: 10px;
+}
+
+.CardContainerContent h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.CardContainerContent p{
+font-size: 12.5px;
+}
+
+
+@media only screen and (max-width:600px){
+    .NavBarMenuLeftContainer .UserIcon{
+        display: flex;
+    }
+    .link{
+        display: none;
+    }
+    .HeroSection{
+        height: 80vh;
+    }
+    .HeroSectionContainer{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+        height: calc(80vh - 40px);
+    }
+    .LocationInputContainer .SearchInputContainer{
+        border-radius: 10px;
+        padding: 18px;
+        width: 98%;
+    }
+    .HeroSectionTitle{
+        font-size: 18px;
+        width: 95%;
+    }
+
+    .CardContainer{
+        margin-bottom: 10px;
+    }
+}
